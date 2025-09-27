@@ -185,6 +185,11 @@ color: #4d5ae5;
 .navigation-menu, .header-adress{
     display: none;
 }
+.header-main .container{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+}
 .button-menu-nav{
     display: flex;
     flex-direction: column;
@@ -193,6 +198,10 @@ color: #4d5ae5;
     gap: 4px;
     border: none;
 }
+.close-nav-menu{
+    background-color: #404bbf;
+    border: none;
+    }
 .overlay-menu-nav{
     font-family: "Roboto", sans-serif;
 font-weight: 700;
@@ -328,7 +337,9 @@ color: #434455;
     margin-bottom: 72px;
 }
 .team-li img{
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 .team-li{
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -940,7 +951,7 @@ max-width: 496px;
 @media(min-width: 1158px) {
   .container {
     max-width: 1158px; /* десктоп */
-    padding: 120px 0;
+    padding: 60px 0;
   }
     .about-menu-icons{
     display: flex;
@@ -982,6 +993,8 @@ flex-basis: calc((100% - 48px) / 3);}
 .fotter{
     justify-content: center;
     align-items: center;
+    padding: 100px auto;
+    margin: 0 auto;
 }
 .fotter-one, .fotter-two{
     padding: 0;
@@ -994,6 +1007,7 @@ flex-basis: calc((100% - 48px) / 3);}
 }
 .fotter .container{
     flex-wrap: nowrap;
+
 }
 .fotter-one{
     margin-right: 120px;
