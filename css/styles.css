@@ -954,7 +954,7 @@ max-width: 496px;
 }
 .address-menu{
     display: flex;
-    
+    gap: 40px;   
 }
 .header-main .container{
     padding: 20px;
@@ -967,6 +967,7 @@ max-width: 496px;
   background-size: cover;
  text-align: center;
  padding: auto;
+ max-width: 1440px;
   margin: 0 auto;
   justify-content: center;
 }
@@ -975,7 +976,6 @@ max-width: 496px;
 }
 .portfolio-li{
 flex-basis: calc((100% - 48px) / 3);}
-}
 .section_two, .section_four, .section_three, .fotter{
     padding: 0;
 }
@@ -991,4 +991,19 @@ flex-basis: calc((100% - 48px) / 3);}
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.fotter .container{
+    flex-wrap: nowrap;
+}
+.fotter-one{
+    margin-right: 120px;
+}
+.fotter-two{
+    margin-right: 80px;
+}
+.footer-container-form{
+    margin: auto;
+}
+
+
 }
