@@ -63,36 +63,7 @@ h2, h3{
     margin: 0 auto;
     padding: 0 16px;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px; /* планшет */
-    padding: 0 32px;
-  }
-  .about-menu-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    border: 1px solid #8e8f99;
-    margin-bottom: 8px;
-}
-.about-menu-text{
-    font-weight: 400;
-    font-size: 16px;
-     line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-}
-}
 
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1158px; /* десктоп */
-    padding: 0 15px;
-  }
-}
 
 /* HEADER START*/
 .header-main{
@@ -100,21 +71,86 @@ h2, h3{
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 
 }
-.header-main .container{
-    display: flex;
-    justify-content: space-between;
+
+.overlay-menu-nav-block{
+    position: fixed;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+background: #fcfcfc;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+pointer-events: none;
+
 }
-.navigation{
-    display: flex;
-    align-items: center;
+.overlay-menu-nav-block.is-open{
+    opacity: 1;
+    pointer-events: auto;
+}
+.overlay-menu-nav-block-text{
+    padding-left: 16px;
+    padding-bottom: 40px;
+    padding-right: 25px;
+    position: absolute;
     
 }
-.address-menu{
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
-.navigation-menu, .address-menu{
+.overlay-main-nav{
     display: flex;
+    flex-direction: column;
+    
+}
+.close-nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+height: 24px;
+    border: none;
+    border-radius: 100%;
+fill: #e7e9fc;
+stroke-width: 1px;
+stroke: rgba(0, 0, 0, 0.1);
+
+}
+.close-nav-menu-btn{
+    fill: #2e2f42;
+}
+.overlay-main-nav-ul{
+    display: flex;
+    flex-direction: column;
     gap: 40px;
+
+    padding-top: 72px;
+}
+.overlay-menu-addres-main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 168px;
+    margin-bottom: 48px;
+}
+.overlay-menu-nav-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-menu-nav-a,
+.overlay-menu-adr-a{
+text-decoration: none;
+color: #2e2f42;
+}
+
+.overlay-menu-address{
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #4d5ae5;
 }
 .logo{
     font-family: Raleway, sans-serif;
@@ -130,7 +166,9 @@ h2, h3{
 .logo-studio{
     color: #2e2f42;
 }
-.navigation-menu .current{
+.navigation-menu .current,
+.overlay-main-nav-ul .current,
+.overlay-menu-addres-main .current{
     color: #404bbf;
 }
 .navigation-menu-a{
@@ -144,18 +182,26 @@ h2, h3{
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
-
-.current::after {
-    color: #404bbf;
-    content: "";
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
+.navigation-menu, .header-adress{
+    display: none;
 }
+.button-menu-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: none;
+}
+.overlay-menu-nav{
+    font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11111;
+letter-spacing: 0.02em;
+color: #2e2f42;
+}
+
 
  .about-menu-a{
     color: #434455;
@@ -174,15 +220,16 @@ h2, h3{
 /* SECTION 1 Start  */
 
 .section_one{
-    background-color: #2E2F42;
-    padding: 72px 52px;
-}
-.section_one{
-   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/people-office-mob.jpg);
      background-repeat: no-repeat;
   background-position: center;
+  padding: 112px 0;
   background-size: cover;
+ text-align: center;
   margin: 0 auto;
+  background-color: #2E2F42;
+    padding: 72px 52px;
 }
 
 .section_one h1{
@@ -434,7 +481,7 @@ transform: translateY(0%);
     padding: 96px 0; 
 }
 
-.fotter-two, .fotter-one, .footer-container-form{
+.fotter div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -472,6 +519,7 @@ footer .fotter a{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 288px;
 }
 .logo-footer{
     font-family: Raleway, sans-serif;
@@ -621,12 +669,11 @@ border: none;
 }
 .modal{
  background: #fcfcfc;
-padding: 24px;
 position: absolute;
-top: 50%;
-left: 23%;
-transform: translate(-50%, -50%);
-max-width: 300hpx;
+top: 6%;
+left: 7%;
+transform: translate(-2%, -6%);
+width: 288px;
 min-height: 584px;
 border-radius: 4px;
 padding: 72px 24px 24px 24px;
@@ -787,3 +834,161 @@ background-color: #404BBF;
     fill: #F4F4FD;
 }
 /*  OVERLAY END */ 
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px; /* планшет */
+    padding: 0 32px;
+  }
+
+.header-main .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+.navigation-menu, .header-adress {
+    display: contents;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-menu{
+    display: flex;
+    gap: 40px;
+}
+  .current::after {
+    color: #404bbf;
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+.address-menu{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.about-menu-text{
+    font-weight: 400;
+    font-size: 16px;
+     line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+.about-menu,.portfolio-ul, .team-ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.items, .portfolio-li, .team-li{
+    flex-basis: calc((100% - 48px) / 2);
+}
+.fotter .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.fotter-form{
+    flex-direction: row;
+}
+.section_one{
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/people-office-plan.jpg);
+     background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ text-align: center;
+  margin: 0 auto;
+  background-color: #2E2F42;
+    padding: 72px 52px;
+}
+.overlay-menu-nav-block,.button-menu-nav{
+    display: none;
+}
+
+.section_one-btn{
+    margin-top: 52px;
+}
+.maintextone{
+    font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 56px;
+line-height: 1.07143;
+letter-spacing: 0.02em;
+text-align: center;
+color: #fff;
+max-width: 496px;
+}
+.modal-overlay{
+
+}
+.modal{
+    width: 408px;
+    top: 20%;
+    left: 20%;
+    transform: translate(-8%, -10%);
+}
+}
+
+
+
+@media(min-width: 1158px) {
+  .container {
+    max-width: 1158px; /* десктоп */
+    padding: 120px 0;
+  }
+    .about-menu-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+}
+.address-menu{
+    display: flex;
+    
+}
+.header-main .container{
+    padding: 20px;
+}
+.section_one{
+       background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/people-office-comp.jpg);
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ text-align: center;
+ padding: auto;
+  margin: 0 auto;
+  justify-content: center;
+}
+.about-menu, .team-ul{
+    flex-wrap: nowrap;
+}
+.portfolio-li{
+flex-basis: calc((100% - 48px) / 3);}
+}
+.section_two, .section_four, .section_three, .fotter{
+    padding: 0;
+}
+.fotter{
+    justify-content: center;
+    align-items: center;
+}
+.fotter-one, .fotter-two{
+    padding: 0;
+}
+
+.modal{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
