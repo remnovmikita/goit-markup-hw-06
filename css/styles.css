@@ -235,8 +235,7 @@ color: #2e2f42;
 
 .section_one{
    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)), image-set(url(../images/people-office-mob.jpg) 1x,
-    url(../images/Dark-bg-mob@2x.jpg) 2x);
+    rgba(46, 47, 66, 0.7)), url(../images/people-office-mob.jpg);
      background-repeat: no-repeat;
   background-position: center;
   padding: 112px 0;
@@ -246,7 +245,12 @@ color: #2e2f42;
   background-color: #2E2F42;
     padding: 72px 52px;
 }
-
+@media (min-resolution: 192dpi) {
+    .section_one{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mob@2x.jpg) ;
+    }
+}
 .section_one h1{
     margin: 0 auto;
 }
@@ -939,8 +943,7 @@ letter-spacing: 0.04em;
 }
 .section_one{
    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)), image-set( url( ../images/people-office-plan.jpg) 1x,
-    url(../images/Dark-bg-plan@2x\ \(2\).jpg) 2x);
+    rgba(46, 47, 66, 0.7)), url( ../images/people-office-plan.jpg);
      background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -948,6 +951,13 @@ letter-spacing: 0.04em;
   margin: 0 auto;
   background-color: #2E2F42;
     padding: 72px 52px;
+}
+@media (min-resolution: 192dpi) {
+    .section_one{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-plan@2x.jpg) ;
+    }
+    
 }
 .overlay-menu-nav-block,.button-menu-nav{
     display: none;
@@ -1010,8 +1020,7 @@ letter-spacing: 0.02em;
 }
 .section_one{
 background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-rgba(46, 47, 66, 0.7)), image-set( url(../images/people-office-comp.jpg) 1x,
-url(../images/Dark-bg-pk@2x.jpg) 2x);
+rgba(46, 47, 66, 0.7)), url(../images/people-office-comp.jpg);
 background-repeat: no-repeat;
 background-position: center;background-size: cover;
 text-align: center;
@@ -1020,6 +1029,12 @@ margin: 0 auto;
 max-width: 1440px;
 padding: 0;
 justify-content: center;
+}
+@media (min-resolution: 192dpi) {
+    .section_one{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-pk@2x.jpg) ;
+    }
 }
 .bacgr{
     display: flex;
@@ -1062,6 +1077,5 @@ flex-basis: calc((100% - 48px) / 3);}
 .footer-container-form{
     margin: auto;
 }
-
-
 }
+
