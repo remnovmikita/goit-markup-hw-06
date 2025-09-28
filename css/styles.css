@@ -69,7 +69,7 @@ h2, h3{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
-    margin-right: 76px;
+    
 }
 .logo-studio{
     color: #2e2f42;
@@ -299,6 +299,7 @@ line-height: 1.11111;
 .about-menu{
 display: flex;
 flex-direction: column;
+
 gap: 72px;
 }
 .aboutmenu-zag{
@@ -329,8 +330,9 @@ color: #434455;
 .team-ul{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 72px;
-    
 }
 .maintext{
     font-weight: 700;
@@ -347,6 +349,10 @@ color: #434455;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
     border-radius: 0px 0px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .team-name{
     font-weight: 500;
@@ -849,7 +855,7 @@ background-color: #404BBF;
 /*  OVERLAY END */ 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    min-width: 768px;
     padding: 0 16px;
      /* планшет */
   }
