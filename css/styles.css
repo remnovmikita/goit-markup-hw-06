@@ -238,11 +238,12 @@ color: #2e2f42;
     rgba(46, 47, 66, 0.7)), url(../images/people-office-mob.jpg);
      background-repeat: no-repeat;
   background-position: center;
-  padding: 112px 0;
   background-size: cover;
  text-align: center;
   margin: 0 auto;
   background-color: #2E2F42;
+}
+.bacgr{
     padding: 72px 52px;
 }
 @media (min-resolution: 192dpi) {
@@ -462,12 +463,10 @@ color: #434455;
 .portfolio-ul .portfolio-li{
     position: relative;
     overflow: hidden;
-     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-ul  .portfolio-li:hover,
-.portfolio-ul  .portfolio-li:focus{
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
+
 .overlay{
     position: relative;
     overflow: hidden;
@@ -863,6 +862,9 @@ background-color: #404BBF;
     padding: 0 16px;
      /* планшет */
   }
+  .bacgr{
+    padding: 112px 136px;
+  }
 .aboutmenu-zag{
     text-align: start;
 }
@@ -879,6 +881,7 @@ background-color: #404BBF;
 .logo{
     display: flex;
     padding: 24px 0;
+    margin-right: 120px;
 }
 
   .current::after {
@@ -924,19 +927,28 @@ letter-spacing: 0.04em;
     letter-spacing: 0.02em;
     color: #434455;
 }
-.about-menu,.portfolio-ul, .team-ul{
+.team-ul{
+        flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+}
+
+.about-menu,.portfolio-ul{
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
 }
-.items, .portfolio-li, .team-li{
+.items{
     flex-basis: calc((100% - 48px) / 2);
 }
-.fotter .container{
+.fotter-one, .fotter-two{
+    padding: 0;
+}
+.fotter .fotter-add{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
 }
 .fotter-form{
     flex-direction: row;
@@ -950,7 +962,6 @@ letter-spacing: 0.04em;
  text-align: center;
   margin: 0 auto;
   background-color: #2E2F42;
-    padding: 72px 52px;
 }
 @media (min-resolution: 192dpi) {
     .section_one{
@@ -1030,6 +1041,13 @@ max-width: 1440px;
 padding: 0;
 justify-content: center;
 }
+.portfolio-ul .portfolio-li{
+    box-shadow: none;
+}
+.portfolio-ul  .portfolio-li:hover,
+.portfolio-ul  .portfolio-li:focus{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 @media (min-resolution: 192dpi) {
     .section_one{
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -1049,6 +1067,9 @@ justify-content: center;
 }
 .about-menu, .team-ul{
     flex-wrap: nowrap;
+}
+.portfolio-ul{
+    gap: 48px 24px;
 }
 .portfolio-li{
 flex-basis: calc((100% - 48px) / 3);}
