@@ -101,7 +101,7 @@
     <section class="section_one ">
       <div class="container bacgr">
         <h1 class="maintextone">Effective Solutions for Your Business</h1>
-        <button type="button" class="section_one-btn">Order Service</button>
+        <button type="button" class="section_one-btn" id="open">Order Service</button>
       </div>
     </section>
     <section class="section_two">
@@ -435,9 +435,9 @@
     </div>
   </footer>
   
-  <div class="modal-overlay">
+  <div class="modal-overlay" id="modalOvr">
     <div class="modal">
-      <button class="modal-close" type="button">
+      <button class="modal-close" type="button" id="close">
         <svg width="8" height="8" class="fotter-icon-form">
           <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
         </svg>
@@ -488,6 +488,8 @@
       </form>
     </div>
   </div>
+  <script src="button-modile.js" defer></script>
+
 </body>
 
 </html>
